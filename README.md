@@ -8,4 +8,6 @@ Stripe のサブスクリプションの請求サイクルを変更するため�
 
 ### トライアル機能を使用して請求サイクルを変更する方法
 
+[update-subscription-cycle-2](update-subscription-cycle-2)
+
 ### subscription schedule を使用して請求サイクルを経んくする方法

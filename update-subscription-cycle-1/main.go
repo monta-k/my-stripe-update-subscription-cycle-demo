@@ -47,7 +47,10 @@ func main() {
 		log.Fatalf("Failed to find item ID: %v", err)
 	}
 
-	_, err = subscription.Cancel(subscriptionID, nil)
+	_, err = subscription.Cancel(subscriptionID, &stripe.SubscriptionCancelParams{
+		InvoiceNow: stripe.Bool(true),
+		Prorate:    stripe.Bool(true),
+	})
 	if err != nil {
 		log.Fatalf("Failed to cancel subscription: %v", err)
 	}

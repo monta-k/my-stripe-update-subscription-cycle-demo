@@ -18,9 +18,9 @@ func main() {
 	}
 	stripe.Key = os.Getenv("STRIPE_SECRET_KEY")
 
-	subscriptionID := "dummy"
-	oldPriceID := "dummy"
-	newPriceID := "dummy"
+	subscriptionID := os.Getenv("STRIPE_SUBSCRIPTION_ID")
+	oldPriceID := os.Getenv("STRIPE_OLD_PRICE_ID")
+	newPriceID := os.Getenv("STRIPE_NEW_PRICE_ID")
 
 	now := time.Now()
 	jst, err := time.LoadLocation("Asia/Tokyo")

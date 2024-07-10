@@ -16,8 +16,8 @@ func main() {
 	}
 	stripe.Key = os.Getenv("STRIPE_SECRET_KEY")
 
-	customerID := "dummy"
-	priceID := "dummy"
+	customerID := os.Getenv("STRIPE_CUSTOMER_ID")
+	priceID := os.Getenv("STRIPE_OLD_PRICE_ID")
 
 	subParams := &stripe.SubscriptionParams{
 		Customer: stripe.String(customerID),
